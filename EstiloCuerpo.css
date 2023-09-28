@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0; /* Aseguramos que el encabezado comienza desde el borde izquierdo */
+    right: 0; /* Aseguramos que el encabezado se extienda hasta el borde derecho */
+    padding: 10px 2%; /* Cambiamos el padding fijo a un porcentaje para adaptabilidad */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00509E;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay suficiente espacio */
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid #00509E;
+    border-radius: 5px;
+    background-color: #00509E;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav li a:hover {
+    background-color: #003f7e;
+    color: #fff;
+}
+
+.main .hero {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Brush Script MT', cursive; /* Estilo de letra manuscrita */
+}
+
+.hero p {
+    font-size: 1.5em;
+    color: #ffffff;
+    font-family: 'Brush Script MT', cursive; /* Estilo de letra manuscrita */
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.feature-card {
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.feature-card img {
+    width: 100%;
+    height: auto;
+}
+
+.feature-card h2 {
+    margin-top: 20px;
+}
+
+.feature-card a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00509E;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.feature-card a:hover {
+    background-color: #003f7e;
+}
+
+footer {
+    background-color: #00509E;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+    .access-btn {
+        background-color: #00509E;
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    
+    .access-btn:hover {
+        background-color: #003f7e;
+    }
+}
