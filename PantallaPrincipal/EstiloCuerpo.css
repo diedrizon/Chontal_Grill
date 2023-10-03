@@ -65,6 +65,53 @@ nav li a:hover {
     color: #fff;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: #00509E;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para el encabezado y el botón de "Acceso Personal" */
+header {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li button#access-btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid #00509E;
+    border-radius: 5px;
+    background-color: #00509E;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav li button#access-btn:hover {
+    background-color: #003f7e;
+    color: #fff;
+}
+
 .main .hero {
     background-size: cover;
     background-position: center;
@@ -156,4 +203,6 @@ footer {
     .access-btn:hover {
         background-color: #003f7e;
     }
+
+    
 }
