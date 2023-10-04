@@ -13,6 +13,14 @@ module.exports = (db) => {
       }
     });
   });
+  //Invoke-RestMethod -Uri "http://localhost:5000/orden/read" -Method GET
+
+
+
+
+
+
+
 
   router.post('/create', (req, res) => {
     const {
@@ -61,6 +69,16 @@ module.exports = (db) => {
       }
     });
   });
+  //Invoke-RestMethod -Uri "http://localhost:5000/orden/create" -Method POST -ContentType "application/json" -Body '{"ID_Cliente": 2, "ID_Empleado": 4, "Id_Tipo_Orden": 2, "Monto": 50.99, "Estado": "En proceso", "Modo_Pago": "Tarjeta", "Fecha_Hora": "2023-10-03 14:30:00"}'
+
+
+
+
+
+
+
+
+
 
   router.put('/update/:id', (req, res) => {
     const ID_Orden = req.params.id;
@@ -113,6 +131,12 @@ module.exports = (db) => {
     });
   });
 
+  //Invoke-RestMethod -Uri "http://localhost:5000/orden/update/3" -Method PUT -ContentType "application/json" -Body '{"ID_Cliente": 2, "ID_Empleado": 4, "Id_Tipo_Orden": 2, "Monto": 55.99, "Estado": "Entregado", "Modo_Pago": "Efectivo", "Fecha_Hora": "2023-10-03 15:45:00"}'
+
+
+
+
+
   router.delete('/delete/:id', (req, res) => {
     const ID_Orden = req.params.id;
     const sql = 'DELETE FROM Orden WHERE ID_Orden = ?';
@@ -128,3 +152,9 @@ module.exports = (db) => {
 
   return router;
 };
+
+//Invoke-RestMethod -Uri "http://localhost:5000/orden/delete/3" -Method DELETE
+
+
+
+

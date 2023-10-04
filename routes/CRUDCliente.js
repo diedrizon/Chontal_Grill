@@ -13,6 +13,12 @@ module.exports = (db) => {
       }
     });
   });
+//Invoke-RestMethod -Uri "http://localhost:5000/cliente/read" -Method GET
+
+
+
+
+  
 
   router.post('/create', (req, res) => {
     const { Cedula, Nombres, Apellidos, Telefono, Correo } = req.body;
@@ -33,6 +39,15 @@ module.exports = (db) => {
       }
     });
   });
+//Invoke-RestMethod -Uri "http://localhost:5000/cliente/create" -Method POST -ContentType "application/json" -Body '{"Cedula": "123456789", "Nombres": "Juan", "Apellidos": "Perez", "Telefono": "123456789", "Correo": "juan@example.com"}'
+
+
+
+
+
+
+
+
 
   router.put('/update/:id', (req, res) => {
     const ID_Cliente = req.params.id;
@@ -56,6 +71,15 @@ module.exports = (db) => {
     });
   });
 
+  //Invoke-RestMethod -Uri "http://localhost:5000/cliente/update/3" -Method PUT -ContentType "application/json" -Body '{"Cedula": "987654321", "Nombres": "Maria", "Apellidos": "Gonzalez", "Telefono": "987654321", "Correo": "maria@example.com"}'
+
+
+
+
+
+
+
+
   router.delete('/delete/:id', (req, res) => {
     const ID_Cliente = req.params.id;
     const sql = 'DELETE FROM Cliente WHERE ID_Cliente = ?';
@@ -71,3 +95,6 @@ module.exports = (db) => {
 
   return router;
 };
+
+
+//Invoke-RestMethod -Uri "http://localhost:5000/cliente/delete/3" -Method DELETE

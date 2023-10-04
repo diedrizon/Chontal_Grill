@@ -14,6 +14,14 @@ module.exports = (db) => {
     });
   });
 
+//Invoke-RestMethod -Uri "http://localhost:5000/categoria/read" -Method Get
+
+
+
+
+
+  
+
   router.post('/create', (req, res) => {
     const { Nombre } = req.body;
     if (!Nombre) {
@@ -30,6 +38,16 @@ module.exports = (db) => {
       }
     });
   });
+
+  //Invoke-RestMethod -Uri "http://localhost:5000/categoria/create" -Method POST -ContentType "application/json" -Body '{"Nombre":"Nueva Categoría"}'
+
+
+
+
+
+
+
+
 
   router.put('/update/:id', (req, res) => {
     const ID_Categoria = req.params.id;
@@ -49,6 +67,14 @@ module.exports = (db) => {
     });
   });
 
+//Invoke-RestMethod -Uri "http://localhost:5000/categoria/update/4" -Method PUT -ContentType "application/json" -Body '{"Nombre":"Categoría Actualizada"}'
+
+
+
+
+
+
+
   router.delete('/delete/:id', (req, res) => {
     const ID_Categoria = req.params.id;
     const sql = 'DELETE FROM Categoria WHERE ID_Categoria = ?';
@@ -64,6 +90,9 @@ module.exports = (db) => {
 
   return router;
 };
+
+
+//Invoke-RestMethod -Uri "http://localhost:5000/categoria/delete/2" -Method DELETE
 
 
 

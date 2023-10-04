@@ -13,6 +13,14 @@ module.exports = (db) => {
       }
     });
   });
+    //Invoke-RestMethod -Uri "http://localhost:5000/comentarios/read" -Method GET
+
+
+
+
+
+
+
 
   router.post('/create', (req, res) => {
     const { ID_Cliente, Comentario, Calificacion, Fecha } = req.body;
@@ -33,6 +41,14 @@ module.exports = (db) => {
       }
     });
   });
+  
+  //Invoke-RestMethod -Uri "http://localhost:5000/comentarios/create" -Method POST -ContentType "application/json" -Body '{"ID_Cliente": 2, "Comentario": "Buena comida", "Calificacion": 5, "Fecha": "2023-10-05T10:00:00"}'
+
+
+
+
+
+
 
   router.put('/update/:id', (req, res) => {
     const ID_Comentarios = req.params.id;
@@ -56,6 +72,15 @@ module.exports = (db) => {
     });
   });
 
+  //Invoke-RestMethod -Uri "http://localhost:5000/comentarios/update/6" -Method PUT -ContentType "application/json" -Body '{"ID_Cliente": 2, "Comentario": "Excelente servicio", "Calificacion": 4, "Fecha": "2023-10-05T12:00:00"}'
+
+
+
+
+
+
+
+
   router.delete('/delete/:id', (req, res) => {
     const ID_Comentarios = req.params.id;
     const sql = 'DELETE FROM Comentarios WHERE ID_Comentarios = ?';
@@ -71,3 +96,6 @@ module.exports = (db) => {
 
   return router;
 };
+
+
+//Invoke-RestMethod -Uri "http://localhost:5000/comentarios/delete/5" -Method DELETE

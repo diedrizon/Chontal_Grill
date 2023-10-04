@@ -14,6 +14,13 @@ module.exports = (db) => {
     });
   });
 
+  //Invoke-RestMethod -Uri "http://localhost:5000/tipo_orden/read" -Method GET
+
+
+
+
+
+
   router.post('/create', (req, res) => {
     const { Nombre, Descripcion, Nota_Especial, Domicilio } = req.body;
     if (!Nombre) {
@@ -33,6 +40,15 @@ module.exports = (db) => {
       }
     });
   });
+
+  //Invoke-RestMethod -Uri "http://localhost:5000/tipo_orden/create" -Method POST -ContentType "application/json" -Body '{"Nombre": "Delivery", "Descripcion": "Entrega a domicilio", "Nota_Especial": "Rápido", "Domicilio": "123 Calle Principal"}'
+
+
+
+
+
+
+
 
   router.put('/update/:id', (req, res) => {
     const Id_Tipo_Orden = req.params.id;
@@ -56,6 +72,14 @@ module.exports = (db) => {
     });
   });
 
+  //Invoke-RestMethod -Uri "http://localhost:5000/tipo_orden/update/2" -Method PUT -ContentType "application/json" -Body '{"Nombre": "Para llevar", "Descripcion": "Pedido para llevar", "Nota_Especial": "Empaque especial", "Domicilio": "456 Calle Secundaria"}'
+
+
+
+
+
+
+
   router.delete('/delete/:id', (req, res) => {
     const Id_Tipo_Orden = req.params.id;
     const sql = 'DELETE FROM Tipo_Orden WHERE Id_Tipo_Orden = ?';
@@ -71,3 +95,5 @@ module.exports = (db) => {
 
   return router;
 };
+
+//Invoke-RestMethod -Uri "http://localhost:5000/tipo_orden/delete/3" -Method DELETE

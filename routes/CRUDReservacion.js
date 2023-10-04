@@ -14,6 +14,15 @@ module.exports = (db) => {
     });
   });
 
+  //Invoke-RestMethod -Uri "http://localhost:5000/reservacion/read" -Method GET
+
+
+
+
+
+
+
+
   router.post('/create', (req, res) => {
     const { ID_Cliente, Descripcion, Fecha_Reservacion, Fecha_Inicio, Fecha_Fin } = req.body;
     if (!ID_Cliente || !Fecha_Reservacion || !Fecha_Inicio || !Fecha_Fin) {
@@ -33,6 +42,15 @@ module.exports = (db) => {
       }
     });
   });
+
+  //Invoke-RestMethod -Uri "http://localhost:5000/reservacion/create" -Method POST -ContentType "application/json" -Body '{"ID_Cliente": 2, "Descripcion": "Reserva de mesa", "Fecha_Reservacion": "2023-10-10", "Fecha_Inicio": "12:00:00", "Fecha_Fin": "14:00:00"}'
+
+
+
+
+
+
+
 
   router.put('/update/:id', (req, res) => {
     const ID_Reservacion = req.params.id;
@@ -56,6 +74,13 @@ module.exports = (db) => {
     });
   });
 
+  //Invoke-RestMethod -Uri "http://localhost:5000/reservacion/update/2" -Method PUT -ContentType "application/json" -Body '{"ID_Cliente": 2, "Descripcion": "Reserva de salón", "Fecha_Reservacion": "2023-10-11", "Fecha_Inicio": "15:00:00", "Fecha_Fin": "17:00:00"}'
+
+
+
+
+
+
   router.delete('/delete/:id', (req, res) => {
     const ID_Reservacion = req.params.id;
     const sql = 'DELETE FROM Reservacion WHERE ID_Reservacion = ?';
@@ -71,3 +96,5 @@ module.exports = (db) => {
 
   return router;
 };
+
+//Invoke-RestMethod -Uri "http://localhost:5000/reservacion/delete/2" -Method DELETE

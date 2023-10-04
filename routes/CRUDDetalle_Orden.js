@@ -13,6 +13,14 @@ module.exports = (db) => {
       }
     });
   });
+    
+  //Invoke-RestMethod -Uri "http://localhost:5000/detalle_orden/read" -Method GET
+
+
+
+
+
+
 
   router.post('/create', (req, res) => {
     const { ID_Menu, ID_Orden, Cantidad } = req.body;
@@ -37,6 +45,13 @@ module.exports = (db) => {
       }
     });
   });
+
+  //Invoke-RestMethod -Uri "http://localhost:5000/detalle_orden/create" -Method POST -ContentType "application/json" -Body '{"ID_Menu": 3, "ID_Orden": 2, "Cantidad": 3}'
+
+
+
+
+
 
   router.put('/update/:id', (req, res) => {
     const ID_Detalle_Orden = req.params.id;
@@ -64,6 +79,15 @@ module.exports = (db) => {
     });
   });
 
+  //Invoke-RestMethod -Uri "http://localhost:5000/detalle_orden/update/4" -Method PUT -ContentType "application/json" -Body '{"ID_Menu": 3, "ID_Orden": 2, "Cantidad": 4}'
+
+
+
+
+
+
+
+
   router.delete('/delete/:id', (req, res) => {
     const ID_Detalle_Orden = req.params.id;
     const sql = 'DELETE FROM Detalle_Orden WHERE ID_Detalle_Orden = ?';
@@ -79,3 +103,6 @@ module.exports = (db) => {
 
   return router;
 };
+
+
+//Invoke-RestMethod -Uri "http://localhost:5000/detalle_orden/delete/5" -Method DELETE
