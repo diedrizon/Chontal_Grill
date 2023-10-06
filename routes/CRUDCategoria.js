@@ -18,10 +18,6 @@ module.exports = (db) => {
 
 
 
-
-
-  
-
   router.post('/create', (req, res) => {
     const { Nombre } = req.body;
     if (!Nombre) {
@@ -40,11 +36,6 @@ module.exports = (db) => {
   });
 
   //Invoke-RestMethod -Uri "http://localhost:5000/categoria/create" -Method POST -ContentType "application/json" -Body '{"Nombre":"Nueva Categoría"}'
-
-
-
-
-
 
 
 
